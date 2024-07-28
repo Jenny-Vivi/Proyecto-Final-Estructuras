@@ -1,10 +1,12 @@
 package modelo;
 
 public class Celda {
-    private boolean estado; // true para camino, false para pared
+    private boolean estado; // true para camino, 
+                            //false para pared
 
     public Celda() {
-        this.estado = true; // Por defecto, las celdas son caminos
+        this.estado = true; // Por defecto, 
+                            //las celdas son caminos
     }
 
     public boolean getEstado() {

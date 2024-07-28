@@ -106,7 +106,7 @@ Explicación detallada de las funcionalidades implementadas:
 
 Generación de Laberintos: Cómo se crean y configuran los laberintos.
 Resolución de Laberintos: Implementación de BFS, DFS y programación dinámica.
-Visualización de Resultados: Cómo se muestran los caminos encontrados y otros resultados en la interfaz gráfica.
+Visualización de Resultados: Cómo se muestran los caminos encontradosc con sus propios colores y otros resultados en la interfaz gráfica.
 
 *******************************************************************************************************************
 # 7. Análisis y Discusión
@@ -131,13 +131,10 @@ Nuevas Funcionalidades: Características adicionales que podrían añadirse.
 Conclusión: Mejor Opción para Encontrar el Camino Más Corto:
 Breadth-First Search (BFS) es generalmente la mejor opción para encontrar el camino más corto en un laberinto debido a su garantía de encontrar el camino más corto y su eficiencia relativa en términos de tiempo. Aunque puede consumir más memoria en comparación con DFS, la ventaja de encontrar el camino más corto lo hace superior para este propósito específico.
 
-Extensiones del Proyecto
-Visualización Paso a Paso: Implementar la visualización del proceso de búsqueda en tiempo real.
-Algoritmos Adicionales: Incluir A* y Dijkstra para comparaciones de rendimiento.
 Generación Aleatoria de Laberintos: Crear laberintos nuevos cada vez que se ejecuta el programa.
 Interfaz Mejorada: Mejorar la UI con controles intuitivos y un diseño atractivo.
 Optimización de Rendimiento: Implementar paralelización y optimización de memoria para laberintos grandes.
-Aplicaciones Prácticas
+Se puede usar para:
 Educación: Usar el proyecto como herramienta educativa para enseñar algoritmos y programación.
 Robótica: Programar robots autónomos para navegar en entornos desconocidos.
 Videojuegos: Crear niveles desafiantes y dinámicos mediante generación de laberintos.

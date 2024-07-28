@@ -32,12 +32,12 @@ public class MazeGenerator {
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setSize(1000, 600);
         frame.setLayout(new BorderLayout());
-        // Inicialización del laberinto y otros componentes
+        // Inicio del laberinto y de otros componentes
         mazePanel = new JPanel() {
             @Override
             protected void paintComponent(Graphics g) {
                 super.paintComponent(g);
-                // Código para dibujar el laberinto
+                //dibujar el laberinto
             }
         };
 
@@ -59,7 +59,8 @@ public class MazeGenerator {
         cacheButton = new JButton("Resolver con Cache");
         normalButton = new JButton("Resolver Normal");
 
-        JButton[] buttons = { generateButton, clearButton, bfsButton, dfsButton, cacheButton, normalButton };
+        JButton[] buttons = { generateButton, clearButton, bfsButton, 
+                            dfsButton, cacheButton, normalButton };
         for (JButton button : buttons) {
             button.setBackground(Color.BLACK); // Fondo negro
             button.setForeground(Color.WHITE); // Texto blanco
@@ -96,7 +97,7 @@ public class MazeGenerator {
         gridPanel = new JPanel();
         frame.add(gridPanel, BorderLayout.CENTER);
 
-        // Crear el área de resultados
+        // Creacion del área de resultados
         resultArea = new JTextArea(10, 30);
         resultArea.setEditable(false);
         JScrollPane scrollPane = new JScrollPane(resultArea);
@@ -213,7 +214,7 @@ public class MazeGenerator {
                 button.addActionListener(new ActionListener() {
                     @Override
                     public void actionPerformed(ActionEvent e) {
-                        controlador.toggleCelda(col, row); // Corregido el orden de las coordenadas
+                        controlador.toggleCelda(col, row); 
                         button.setBackground(
                                 controlador.getLaberinto().getCelda(col, row).getEstado() ? 
                                 Color.WHITE : Color.GRAY);
@@ -256,7 +257,7 @@ public class MazeGenerator {
         }
 
         List<int[]> path;
-        long startTime = System.nanoTime(); // Captura el tiempo en nanosegundos antes de iniciar la resolución
+        long startTime = System.nanoTime(); //el tiempo en nanosegundos antes de iniciar la resolución
 
         // Resolución del laberinto con el método seleccionado
         switch (method) {
@@ -293,7 +294,7 @@ public class MazeGenerator {
             return;
         }
 
-        clearMazePath(); // Limpiar el laberinto visual antes de dibujar el nuevo camino
+        clearMazePath();
         drawPath(path, method); // Pasar el método para usar colores específicos
         resultArea.append("Camino encontrado: " + pathToString(path) + "\n"); // Mostrar el camino encontrado en el área
                                                                               // de resultados
@@ -341,8 +342,8 @@ public class MazeGenerator {
             return;
         }
 
-        clearMazePath(); // Limpiar el laberinto visual antes de dibujar el nuevo camino
-        drawPath(path, ""); // Dibujar el camino sin especificar un método específico
+        clearMazePath();
+        drawPath(path, ""); // Dibujar el camino sin mencionar un método específico
     }
 
     // Método para convertir el camino en una cadena legible

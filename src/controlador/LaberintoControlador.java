@@ -109,7 +109,7 @@ public class LaberintoControlador {
                 }
             }
         }
-        return new ArrayList<>(); // No se encontró camino
+        return new ArrayList<>(); //Cuando no se encontro el camino
     }
 
     public List<int[]> solveWithCache() {
@@ -118,13 +118,13 @@ public class LaberintoControlador {
             return cache.get(key);
         }
 
-        List<int[]> path = solveBFS(); // O cualquier otro método de resolución que quieras usar
+        List<int[]> path = solveBFS(); //método de resolución que quieras usar
         cache.put(key, path);
         return path;
     }
 
     public List<int[]> solveNormal() {
-        return solveBFS(); // O solveDFS() si prefieres
+        return solveBFS();
     }
 
     private boolean isValid(int x, int y, boolean[][] visited) {
