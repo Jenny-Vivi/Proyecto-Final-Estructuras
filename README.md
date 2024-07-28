@@ -129,7 +129,7 @@ Nuevas Funcionalidades: Características adicionales que podrían añadirse.
 *******************************************************************************************************************
  # 8. Conclusiones:
 Conclusión: Mejor Opción para Encontrar el Camino Más Corto:
-Breadth-First Search (BFS) es generalmente la mejor opción para encontrar el camino más corto en un laberinto no ponderado debido a su garantía de encontrar el camino más corto y su eficiencia relativa en términos de tiempo. Aunque puede consumir más memoria en comparación con DFS, la ventaja de encontrar el camino más corto lo hace superior para este propósito específico.
+Breadth-First Search (BFS) es generalmente la mejor opción para encontrar el camino más corto en un laberinto debido a su garantía de encontrar el camino más corto y su eficiencia relativa en términos de tiempo. Aunque puede consumir más memoria en comparación con DFS, la ventaja de encontrar el camino más corto lo hace superior para este propósito específico.
 
 Extensiones del Proyecto
 Visualización Paso a Paso: Implementar la visualización del proceso de búsqueda en tiempo real.

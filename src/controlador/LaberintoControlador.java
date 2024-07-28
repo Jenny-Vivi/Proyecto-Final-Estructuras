@@ -1,6 +1,5 @@
 package controlador;
 
-//import modelo.Celda;
 import modelo.Laberinto;
 
 import java.util.*;
@@ -53,10 +52,10 @@ public class LaberintoControlador {
         boolean[][] visited = new boolean[laberinto.getAncho()][laberinto.getAltura()];
         int[][] parent = new int[laberinto.getAncho() * laberinto.getAltura()][2];
         Queue<int[]> queue = new LinkedList<>();
-        queue.add(new int[]{startX, startY});
+        queue.add(new int[] { startX, startY });
         visited[startX][startY] = true;
 
-        int[][] directions = {{0, 1}, {1, 0}, {0, -1}, {-1, 0}};
+        int[][] directions = { { 0, 1 }, { 1, 0 }, { 0, -1 }, { -1, 0 } };
 
         while (!queue.isEmpty()) {
             int[] current = queue.poll();
@@ -73,8 +72,8 @@ public class LaberintoControlador {
 
                 if (isValid(newX, newY, visited)) {
                     visited[newX][newY] = true;
-                    queue.add(new int[]{newX, newY});
-                    parent[newY * laberinto.getAncho() + newX] = new int[]{x, y};
+                    queue.add(new int[] { newX, newY });
+                    parent[newY * laberinto.getAncho() + newX] = new int[] { x, y };
                 }
             }
         }
@@ -85,10 +84,10 @@ public class LaberintoControlador {
         boolean[][] visited = new boolean[laberinto.getAncho()][laberinto.getAltura()];
         int[][] parent = new int[laberinto.getAncho() * laberinto.getAltura()][2];
         Stack<int[]> stack = new Stack<>();
-        stack.push(new int[]{startX, startY});
+        stack.push(new int[] { startX, startY });
         visited[startX][startY] = true;
 
-        int[][] directions = {{0, 1}, {1, 0}, {0, -1}, {-1, 0}};
+        int[][] directions = { { 0, 1 }, { 1, 0 }, { 0, -1 }, { -1, 0 } };
 
         while (!stack.isEmpty()) {
             int[] current = stack.pop();
@@ -105,8 +104,8 @@ public class LaberintoControlador {
 
                 if (isValid(newX, newY, visited)) {
                     visited[newX][newY] = true;
-                    stack.push(new int[]{newX, newY});
-                    parent[newY * laberinto.getAncho() + newX] = new int[]{x, y};
+                    stack.push(new int[] { newX, newY });
+                    parent[newY * laberinto.getAncho() + newX] = new int[] { x, y };
                 }
             }
         }
@@ -118,7 +117,7 @@ public class LaberintoControlador {
         if (cache.containsKey(key)) {
             return cache.get(key);
         }
-        
+
         List<int[]> path = solveBFS(); // O cualquier otro método de resolución que quieras usar
         cache.put(key, path);
         return path;
@@ -129,18 +128,19 @@ public class LaberintoControlador {
     }
 
     private boolean isValid(int x, int y, boolean[][] visited) {
-        return x >= 0 && x < laberinto.getAncho() && y >= 0 && y < laberinto.getAltura() && !visited[x][y] && laberinto.getCelda(x, y).getEstado();
+        return x >= 0 && x < laberinto.getAncho() && y >= 0 && y < laberinto.getAltura() && !visited[x][y]
+                && laberinto.getCelda(x, y).getEstado();
     }
 
     private List<int[]> buildPath(int[][] parent, int x, int y) {
         List<int[]> path = new ArrayList<>();
         while (x != startX || y != startY) {
-            path.add(new int[]{x, y});
+            path.add(new int[] { x, y });
             int[] p = parent[y * laberinto.getAncho() + x];
             x = p[0];
             y = p[1];
         }
-        path.add(new int[]{startX, startY});
+        path.add(new int[] { startX, startY });
         return path;
     }
 }

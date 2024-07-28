@@ -35,7 +35,7 @@ public class Laberinto {
     public void resetLaberinto() {
         for (int i = 0; i < ancho; i++) {
             for (int j = 0; j < altura; j++) {
-                celdas[i][j].setEstado(true); // Restablecer todas las celdas a camino
+                celdas[i][j].setEstado(true); //todas las celdas a camino
             }
         }
     }

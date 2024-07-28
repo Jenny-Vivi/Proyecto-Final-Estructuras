@@ -30,7 +30,7 @@ public class MazeGenerator {
     public MazeGenerator() {
         JFrame frame = new JFrame("Generador de laberintos");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setSize(1000, 600); // Aumentar el tamaño para incluir el área de resultados
+        frame.setSize(1000, 600);
         frame.setLayout(new BorderLayout());
         // Inicialización del laberinto y otros componentes
         mazePanel = new JPanel() {
@@ -222,7 +222,7 @@ public class MazeGenerator {
 
                 // Marca las celdas de inicio y fin
                 if (i == startY && j == startX) {
-                    button.setBackground(Color.GREEN); // Inicio en verde
+                    button.setBackground(Color.GREEN); // Inicio de color verde
                 } else if (i == endY && j == endX) {
                     button.setBackground(Color.RED); // Fin en rojo
                 }
