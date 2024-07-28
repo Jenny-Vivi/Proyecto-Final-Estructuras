@@ -147,6 +147,7 @@ Optimización de Redes: Planificar rutas eficientes en redes de transporte y com
 
 *******************************************************************************************************************
 9. Anexos
+![alt text](image.png)
 ![alt text](image1.png)
 ![alt text](image2.png)
 ![alt text](image3.png)
@@ -155,4 +156,4 @@ Optimización de Redes: Planificar rutas eficientes en redes de transporte y com
 
 
 
-https://github.com/Jenny-Vivi/Proyecto_Final_Estructuras_Datos.git
+https://github.com/Jenny-Vivi/Proyecto-Final-Estructuras
